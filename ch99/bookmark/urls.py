@@ -4,5 +4,5 @@ from bookmark.views import BookmarkLV, BookmarkDV
 app_name = 'bookmark'
 urlpatterns = [
     path('', BookmarkLV.as_view(), name='index'),
-    path('<ing:pk>/', BookmarkDV.as_view(), name='detail'),
+    path('<int:pk>/', BookmarkDV.as_view(), name='detail'),
 ]
