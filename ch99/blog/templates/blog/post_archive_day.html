@@ -5,12 +5,13 @@
 {% block content %}
 
     <h1>Post Archives for {{ day|date:"N d, Y" }}</h1>
+    <br><br>
 
     <div>
         <ul>
             {% for post in object_list %}
             <li class="h5">
-                {{ post.modify_dt|date:"Y-m-d" }}&nbsp;&nbsp;&nbsp;
+                {{ post.modify_dt|date:"Y-m-d" }}&emsp;
                 <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a>
             </li>
             {% endfor %}
@@ -18,3 +19,4 @@
     </div>
 
 {% endblock %}
+
